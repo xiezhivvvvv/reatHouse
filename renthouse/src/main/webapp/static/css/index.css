@@ -1,0 +1,23 @@
+#page{
+	width:980px;
+	margin:0 auto;
+}
+#header{
+	height:220px;
+	background-color: green;
+}
+#footer{
+	height: 100px;
+	background-color: gray;
+}
+#left{
+	float:left;
+	width:200px;
+}
+#content{
+	float:left;
+	width:760px;
+}
+.clear{
+	clear: both;
+}

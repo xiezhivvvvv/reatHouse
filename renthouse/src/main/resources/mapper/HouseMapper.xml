@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.renthouse.dao.HouseDao">
+  <select id ="getAll" resultType="House">
+  	 select * from House where state=1
+  </select>
+  
+    <select id ="getHouseById" parameterType="int" resultType="House">
+		select * from House where id = #{id}
+<!--   	 SELECT * FROM `house` WHERE id =11 -->
+  </select>
+  
+    <select id ="getPhoto" parameterType="int" resultType="Photo">
+       SELECT photo.* FROM photo ,house WHERE photo.`HouseId`=11 AND house.id=11
+  </select>
+  
+ <select id="getLoginUser" parameterType="int"  resultType="User">
+        select * from user where id=#{id}
+ </select>
+  <select id="updateHouse" parameterType="hashmap">
+<!--           	UPDATE house
+		SET userId=#{userid},state=0
+	WHERE  id =#{houseid} -->
+	  	UPDATE house
+		SET userId=13,state=0
+	WHERE  id =11
+ </select>
+  
+
+  
+  </mapper>
